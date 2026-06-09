@@ -1,4 +1,4 @@
-import ProductCard from './ProductCard';
+import ProductCarousel from './ProductCarousel';
 import { CATEGORIES, products } from '../data/products';
 
 const categoryOrder = ['lighting', 'mirrors', 'fans', 'smarthome'];
@@ -29,11 +29,7 @@ export default function ProductsShowcase() {
                 <h3 className="font-display mb-8 text-xl font-light text-espresso md:text-2xl">
                   {cat.label}
                 </h3>
-                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {items.map((product) => (
-                    <ProductCard key={product.id} product={product} theme="light" />
-                  ))}
-                </div>
+                <ProductCarousel items={items} categoryLabel={cat.label} />
               </div>
             );
           })}

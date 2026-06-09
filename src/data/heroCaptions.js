@@ -13,28 +13,36 @@ export const HERO_CAPTIONS = [
   {
     id: 'lighting',
     ...quarterRange(0),
-    side: 'left',
+    align: 'left',
+    position:
+      'top-[10vh] left-[4vw] md:top-[12vh] md:left-[5vw] lg:top-[14vh]',
     label: 'Luxury Lighting',
     text: 'Layered ceiling lights and cove glow shape living spaces built for warm evening gatherings.',
   },
   {
     id: 'fans',
     ...quarterRange(1),
-    side: 'right',
+    align: 'right',
+    position:
+      'top-1/2 right-[4vw] -translate-y-1/2 md:right-[5vw] lg:right-[6vw]',
     label: 'European Fans',
     text: 'Quiet ceiling fans with refined blades bring comfort without disturbing the room’s calm lines.',
   },
   {
     id: 'mirrors',
     ...quarterRange(2),
-    side: 'left',
+    align: 'left',
+    position:
+      'top-[38vh] left-[4vw] md:top-[36vh] md:left-[5vw] lg:top-[34vh]',
     label: 'Designer Mirrors',
     text: 'Backlit vanity mirrors and shelf lighting turn the bath into a composed ritual space.',
   },
   {
     id: 'smart',
     ...quarterRange(3),
-    side: 'right',
+    align: 'right',
+    position:
+      'bottom-[14vh] right-[4vw] md:bottom-[16vh] md:right-[5vw] lg:bottom-[18vh]',
     label: 'Smart Automation',
     text: 'One touch panel orchestrates lighting, climate and scenes across the entire home.',
   },
