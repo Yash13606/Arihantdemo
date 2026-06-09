@@ -10,8 +10,8 @@ export default function HeroCaptions({ activeId }) {
         return (
           <div
             key={caption.id}
-            className={`absolute bottom-[12vh] w-[min(88vw,240px)] px-6 transition-all duration-500 md:bottom-[16vh] md:w-[25vw] md:max-w-[360px] md:min-w-[260px] md:px-10 lg:min-w-[280px] ${
-              isLeft ? 'left-0 text-left md:left-[4vw]' : 'right-0 text-right md:right-[4vw]'
+            className={`absolute bottom-[10vh] w-[min(92vw,300px)] px-5 transition-all duration-500 sm:w-[min(88vw,340px)] md:bottom-[14vh] md:w-[28vw] md:max-w-[420px] md:min-w-[300px] md:px-8 lg:min-w-[320px] lg:max-w-[440px] ${
+              isLeft ? 'left-0 text-left md:left-[3vw]' : 'right-0 text-right md:right-[3vw]'
             } ${
               isActive
                 ? 'translate-y-0 opacity-100'
@@ -21,10 +21,10 @@ export default function HeroCaptions({ activeId }) {
             }`}
             aria-hidden={!isActive}
           >
-            <p className="mb-2 text-[9px] tracking-[0.22em] text-copper uppercase md:mb-2.5 md:text-[11px]">
+            <p className="mb-2.5 font-medium text-[12px] tracking-[0.2em] text-copper uppercase sm:text-[13px] md:mb-3 md:text-[15px] lg:text-[16px]">
               {caption.label}
             </p>
-            <p className="text-[12px] leading-relaxed text-cream/85 md:text-[15px] md:leading-[1.65] lg:text-[16px]">
+            <p className="text-[15px] leading-[1.6] text-cream sm:text-[16px] md:text-[18px] md:leading-[1.65] lg:text-[20px] lg:leading-[1.7]">
               {caption.text}
             </p>
           </div>
