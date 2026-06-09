@@ -27,7 +27,7 @@ export default function FrameHero() {
 
   const [loadedPct, setLoadedPct] = useState(0);
   const [ready, setReady] = useState(false);
-  const [activeCaptionId, setActiveCaptionId] = useState('living');
+  const [activeCaptionId, setActiveCaptionId] = useState('lighting');
   const loadedCountRef = useRef(0);
 
   const prefersReducedMotion =

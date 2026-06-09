@@ -10,8 +10,8 @@ export default function HeroCaptions({ activeId }) {
         return (
           <div
             key={caption.id}
-            className={`absolute bottom-[14vh] max-w-[240px] px-6 transition-all duration-500 md:max-w-[280px] md:px-10 ${
-              isLeft ? 'left-0 text-left' : 'right-0 text-right'
+            className={`absolute bottom-[12vh] w-[min(88vw,240px)] px-6 transition-all duration-500 md:bottom-[16vh] md:w-[25vw] md:max-w-[360px] md:min-w-[260px] md:px-10 lg:min-w-[280px] ${
+              isLeft ? 'left-0 text-left md:left-[4vw]' : 'right-0 text-right md:right-[4vw]'
             } ${
               isActive
                 ? 'translate-y-0 opacity-100'
@@ -21,10 +21,10 @@ export default function HeroCaptions({ activeId }) {
             }`}
             aria-hidden={!isActive}
           >
-            <p className="mb-1.5 text-[9px] tracking-[0.22em] text-copper uppercase md:text-[10px]">
+            <p className="mb-2 text-[9px] tracking-[0.22em] text-copper uppercase md:mb-2.5 md:text-[11px]">
               {caption.label}
             </p>
-            <p className="text-[12px] leading-relaxed text-cream/85 md:text-[13px]">
+            <p className="text-[12px] leading-relaxed text-cream/85 md:text-[15px] md:leading-[1.65] lg:text-[16px]">
               {caption.text}
             </p>
           </div>

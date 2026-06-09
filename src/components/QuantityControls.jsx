@@ -1,15 +1,20 @@
 import { useCart } from '../context/CartContext';
 
-export default function QuantityControls({ product, className = '' }) {
+export default function QuantityControls({ product, className = '', theme = 'dark' }) {
   const { getQuantity, addItem, incrementItem, decrementItem } = useCart();
   const quantity = getQuantity(product.id);
+  const isLight = theme === 'light';
 
   if (quantity === 0) {
     return (
       <button
         type="button"
         onClick={() => addItem(product)}
-        className={`w-full rounded-full border border-copper/30 py-2.5 text-[10px] tracking-[0.12em] text-copper uppercase transition hover:bg-copper hover:text-ink ${className}`}
+        className={`w-full rounded-full border py-2.5 text-[10px] tracking-[0.12em] uppercase transition ${
+          isLight
+            ? 'border-espresso/15 text-espresso hover:border-copper hover:bg-copper hover:text-ink'
+            : 'border-copper/30 text-copper hover:bg-copper hover:text-ink'
+        } ${className}`}
       >
         Add To Inquiry
       </button>
@@ -18,7 +23,11 @@ export default function QuantityControls({ product, className = '' }) {
 
   return (
     <div
-      className={`flex w-full items-center justify-between rounded-full border border-copper/30 bg-copper/5 px-1 py-1 ${className}`}
+      className={`flex w-full items-center justify-between rounded-full border px-1 py-1 ${
+        isLight
+          ? 'border-espresso/12 bg-linen-deep/60'
+          : 'border-copper/30 bg-copper/5'
+      } ${className}`}
       role="group"
       aria-label={`Quantity for ${product.name}`}
     >
@@ -30,7 +39,9 @@ export default function QuantityControls({ product, className = '' }) {
       >
         −
       </button>
-      <span className="min-w-[2ch] text-center text-sm font-medium text-cream tabular-nums">
+      <span
+        className={`min-w-[2ch] text-center text-sm font-medium tabular-nums ${isLight ? 'text-espresso' : 'text-cream'}`}
+      >
         {quantity}
       </span>
       <button

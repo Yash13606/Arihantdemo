@@ -12,6 +12,10 @@
   --color-gold: #c9a84c;
   --color-cream: #f5f0e8;
   --color-mist: #e6e2d8;
+  --color-linen: #f3ede4;
+  --color-linen-deep: #e8e0d4;
+  --color-espresso: #2a2520;
+  --color-warm-stone: #6b6358;
 }
 
 html {
@@ -37,6 +41,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+.product-card-light {
+  background: #faf8f5;
+  border: 1px solid rgba(42, 37, 32, 0.08);
+  box-shadow: 0 1px 3px rgba(42, 37, 32, 0.04);
+}
+
+.product-card-light:hover {
+  border-color: rgba(196, 165, 116, 0.45);
+  box-shadow: 0 8px 24px rgba(42, 37, 32, 0.06);
 }
 
 .glow-copper {
