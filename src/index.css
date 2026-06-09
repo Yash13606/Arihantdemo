@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@import 'lenis/dist/lenis.css';
+
+@theme {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --color-ink: #08080a;
+  --color-charcoal: #121218;
+  --color-charcoal-soft: #1a1a22;
+  --color-copper: #c4a574;
+  --color-copper-hot: #ddb98a;
+  --color-gold: #c9a84c;
+  --color-cream: #f5f0e8;
+  --color-mist: #e6e2d8;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-mist);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-copper) 35%, transparent);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glow-copper {
+  box-shadow: 0 0 40px rgba(196, 165, 116, 0.15);
+}
+
+.section-pad {
+  @apply px-6 py-24 md:px-12 md:py-32 lg:px-20 lg:py-40;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
